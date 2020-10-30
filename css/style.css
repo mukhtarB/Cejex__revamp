@@ -1,0 +1,271 @@
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+#wh-body{
+	background-color:#e8dfc6;
+	color:#8F8F8F;
+	overflow:hidden;
+	font-family:poppins, 'sans-serif';
+}
+h1{
+	color:#000;
+}
+a{
+	text-decoration:none;
+	color:#8F8F8F;
+}
+a:hover{
+	color:initial;
+	text-decoration:none;
+}
+.active{
+	background-color:orange!important;
+}
+.rotate_p{
+	transform: rotate(180deg);
+}
+.rotate_n{
+	transform: rotate(-180deg);
+}
+.btn{
+	background:orange;
+	color:#fff;
+}
+.btn:hover{
+	background:sienna;
+	color:orange;
+}
+.overlay{
+	position:relative;
+}
+.overlay::before{
+	background:rgba(255, 165, 0, 0.45);
+	width:100%;
+	height:100%;
+	content:'';
+	position:absolute;
+	left:0px;
+	top:0px;
+	transform:scale(0);
+	transition:transform 0.5s;
+	z-index:200;
+}
+.overlay:hover::before{
+	transform:scale(0.93);
+}
+
+
+
+
+/* HOME */
+#home{
+	border:double black;
+	position:relative;
+}
+header{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:10;
+	width:100%;
+}
+#header{
+	background-image:url('../images/b10.jpg');
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	height:350px;
+	width:100%;
+	position:initial;
+}
+#home header nav{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	height:80px;
+	background:rgba(0, 0, 0, 0.85);
+	/* color:#8F8F8F; */
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	transition: top 0.2s;
+}
+#logo-div{
+	/* background-color:orange; */
+	color:#fff;
+}
+#logo-div a{
+	font-size:25px;
+	color:white;
+	/* transform:scale(0.7); */
+}
+#logo-div a div{
+	transform:scale(0.7);
+}
+#logo-div img{
+	margin-top:45px;
+	margin-left:10px;
+	background-color:orange;"
+}
+header nav ul{
+	list-style:none;
+	margin:0px;
+}
+header nav ul li a{
+	color:#8F8F8F;
+}
+header nav ul li{
+	display:inline-block;
+	margin-bottom:0.5rem;
+	padding:5px 7px;
+	text-align:center;
+	margin:0px 5px;
+}
+header nav ul li:hover{
+	border-bottom:2px solid sienna;
+	border-right:1.5px solid sienna;
+	border-radius:20px;
+}
+header nav ul li:hover a{
+	color:#fff;
+}
+header nav #socials{
+	width:72px;
+	margin-top:4px;
+}
+.dropdown-menu{
+	background-color:rgb(0, 0, 0, 0.85);
+	color:black;
+	border:1px solid white;
+	margin-top:8px;;
+}
+.dropdown-menu a{
+	color:white;
+}
+header nav #socials li, .hamburger{
+	margin:unset;
+	margin-bottom:0.3rem;
+	border:1px solid white;
+	width:30px;
+	height:30px;
+	padding:2px;
+	background-color:sienna;
+}
+.hamburger{
+	display:none;
+}
+.hamburger:hover{
+	border-radius:0px;
+	border:1px solid white;
+}
+.fa-caret-down{
+	position:relative;
+	left:-8px;
+	top:-7px;
+	transition:transform 0.5s;
+}
+#myCarousel .carousel-item{
+	height:100vh;
+}
+
+
+/* Main */
+.jumbo_box{
+	position:relative;
+	top:-160px;
+	left:0px;
+	width:100%;
+	z-index:14;
+}
+.jumbotron{
+	background:transparent;
+}
+.jumbo_content{
+	border:2px solid sienna;
+	border-radius:3px;
+	font-size:1.5rem;
+	background-color:rgb(255, 165, 0, 0.3);
+	color:#8F8F8F;
+}
+.jumbo_content h3{
+	font-size:2.5rem;
+	color:white;
+}
+main{
+	transform:translateY(-100px);
+}
+main h1{
+	transform:translateY(-40px);
+}
+figure{
+	position:relative;
+	margin:0px;
+	overflow:hidden;
+	/* z-index:10; */
+}
+figcaption{
+	position:absolute;
+	bottom:3px;
+	left:0px;
+	transform:translateX(100%);
+	transition:transform 0.4s;
+	transition-delay:0.2s;
+	color:white;
+	/* font-weight:bolder; */
+	/* z-index:25; */
+}
+.overlay:hover figcaption{
+	transform:translateX(0%);
+}
+figcaption p{
+	margin:0px;
+}
+.x{
+	transform:translateY(40px);
+	border:2px solid sienna;
+}
+footer{
+	background:black;
+}
+
+
+@media screen and (max-width: 767px){
+	
+	.hamburger{
+		display:unset;
+		position:absolute;
+		right:85px;
+		top:23px;
+	}
+	.li{
+		display:none;
+	}
+	#myCarousel .carousel-item img{
+		height:100vh!important;
+		width:auto!important;
+		transform: translateX(-69px);
+	}
+	.jumbo_box{
+		position:unset;
+		padding:0px;
+		width:100vw;
+	}
+
+	.jumbo_content{
+		width:100%;
+		margin-top: 15px;
+	}
+	main{
+		transform:unset;
+	}
+	main h1{
+		transform:unset;
+	}
+	.x{
+		transform:unset;
+	}
+}
