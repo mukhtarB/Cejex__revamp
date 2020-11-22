@@ -16,7 +16,12 @@
 	<body>
 		
 		<div class = "container-fluid p-0" id = "wh-body">
-		
+			
+			<!-- preloader -->
+			<div class = "preload">
+				<div class = "circle-loader"></div>
+			</div>
+			
 			<!-- HOME -->
 			<div id = "home">
 				<header id = "header">
@@ -257,6 +262,14 @@
 		<script src= "js/jquery-3.5.1.min.js"></script>
 		<script src= "js/popper.js"></script>
 		<script src = "js/bootstrap_js/bootstrap.min.js"></script>
+		
+		<script>
+			// preloader
+			$(window).on('load', function(){
+				$('.preload').fadeOut();
+			});
+		</script>
+		
 		<script>
 		
 			//nav hide on scroll
